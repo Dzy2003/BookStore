@@ -27,6 +27,7 @@ public class OrderDetailServlet extends HttpServlet {
 		try {
 			User user = userService.findByID(uid);
 			List<CartVo> itemByOid = service.findOrderItemByOid(oid);
+			request.setAttribute("oid", oid);
 			request.setAttribute("user", user);
 			request.setAttribute("orderItem", itemByOid);
 			request.getRequestDispatcher("/manager/orderdetail.jsp").forward(request, response);

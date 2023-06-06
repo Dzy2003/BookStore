@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/ConfirmOrderServlet")
+@WebServlet("/manager/ConfirmOrderServlet")
 public class ConfirmOrderServlet extends HttpServlet {
 	OrderService service = new OrderServiceImpl();
 	public void doGet(HttpServletRequest request, HttpServletResponse response)

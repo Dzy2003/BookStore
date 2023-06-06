@@ -48,4 +48,11 @@ public class CartDaoImpl implements CartDao {
         String sql = "select * from cart where cart.cid IN (" + s + ")";
         return runner.query(sql, new BeanListHandler<Cart>(Cart.class));
     }
+
+    @Override
+    public Integer deleteCartById(Integer id) throws SQLException {
+        QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
+        String sql = "delete from cart where cid = ?";
+        return runner.update(sql,id);
+    }
 }

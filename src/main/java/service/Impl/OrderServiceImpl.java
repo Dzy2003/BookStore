@@ -79,13 +79,20 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void confirmOrder(Integer oid) throws SQLException {
-        orderDao.updateStatus(orderDao.selectOrderById(oid));
+        Order order = orderDao.selectOrderById(oid);
+        order.setState(true);
+        orderDao.updateStatus(order);
     }
 
     @Override
     public List<Order> clientListOrder(Integer uid) throws SQLException {
         List<Order> orders = orderDao.selectAll(uid);
         return orders;
+    }
+
+    @Override
+    public void delete(Integer id) throws SQLException {
+        orderDao.deleteOrderById(id);
     }
 
 

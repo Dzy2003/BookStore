@@ -29,6 +29,13 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
+    public Integer deleteBookById(Integer id) throws SQLException {
+        QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
+        String sql = "delete from book where id = ?";
+        return runner.update(sql,id);
+    }
+
+    @Override
     public List<Book> getPageData(Integer begin, Integer end) throws SQLException {
         QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
         String sql = "select * from book limit ?,?";

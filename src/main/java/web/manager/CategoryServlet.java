@@ -21,12 +21,6 @@ public class CategoryServlet extends HttpServlet {
 		String method = request.getParameter("method");
 		if (method.equals("add")) {
 			add(request, response);
-		} else if (method.equals("delete")) {
-			delete(request, response);
-		} else if (method.equals("update")) {
-			update(request, response);
-		} else if (method.equals("find")) {
-			find(request, response);
 		} else if (method.equals("listall")) {
 			listAll(request, response);
 		} else {
@@ -51,20 +45,6 @@ public class CategoryServlet extends HttpServlet {
 
 	}
 
-	private void find(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void update(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void delete(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-
-	}
 
 	private void add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {

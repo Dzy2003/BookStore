@@ -75,4 +75,11 @@ public class OrderDaoImpl implements OrderDao {
         Object params[] = {order.isState(), order.getId()};
         runner.update(sql, params);
     }
+
+    @Override
+    public Integer deleteOrderById(Integer id) throws SQLException {
+        QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
+        String sql = "delete from orders where id = ?";
+        return runner.update(sql,id);
+    }
 }

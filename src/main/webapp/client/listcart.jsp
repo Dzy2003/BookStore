@@ -32,7 +32,7 @@
 	    		<td>${me.realPrice }</td>
 				<c:set var="ids" value="${ids}${me.cid},${loop.last ? '' : ' '}" />
 	    		<td>
-	    			<a href="#">删除</a>
+	    			<a href="${pageContext.request.contextPath }/client/DeleteServlet?toDelete=cart&cid=${me.cid}">删除</a>
 	    		</td>
     		</tr>
     	</c:forEach>

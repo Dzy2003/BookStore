@@ -32,4 +32,10 @@ public interface BookService {
      * @throws SQLException
      */
     PageBean<Book> getByPage(Integer pageNow, Integer pageSize,Integer cid) throws SQLException;
+
+    /**
+     * 删除
+     * @param id
+     */
+    void delete(Integer id) throws SQLException;
 }

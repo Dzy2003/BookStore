@@ -22,5 +22,9 @@ public interface CartService {
      */
     List<CartVo> listCartBook(Integer uid) throws SQLException;
 
-
+    /**
+     * 删除
+     * @param id
+     */
+    void delete(Integer id) throws SQLException;
 }

@@ -20,7 +20,7 @@
 	  			<td>${c.name }</td>
 	  			<td>${c.description }</td>
 	  			<td>
-	  				<a href="#">删除</a>
+					<a href="${pageContext.request.contextPath }/manager/DeleteServlet?toDelete=category&cid=${c.id}">删除</a>
 	  				<a href="#">修改</a>
 	  			</td>
   			</tr>

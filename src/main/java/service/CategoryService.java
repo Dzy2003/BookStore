@@ -18,5 +18,9 @@ public interface CategoryService {
      */
     List<Category> getAllCategories() throws SQLException;
 
-
+    /**
+     * 删除
+     * @param id
+     */
+    void delete(Integer id) throws SQLException;
 }

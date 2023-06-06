@@ -43,4 +43,9 @@ public class BookServiceImpl implements BookService {
         page.setTotalCount(record);
         return page;
     }
+
+    @Override
+    public void delete(Integer id) throws SQLException {
+        dao.deleteBookById(id);
+    }
 }

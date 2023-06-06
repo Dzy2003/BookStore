@@ -26,5 +26,20 @@ public interface CategoryDao {
      */
     List<Category> getAll() throws SQLException;
 
+    /**
+     * 通过分类名称获得购物车
+     * @param name
+     * @return
+     * @throws SQLException
+     */
     Category getByName(String name) throws SQLException;
+
+    /**
+     * 根据id删除
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+
+    Integer deleteCategoryById(Integer id) throws SQLException;
 }

@@ -29,7 +29,7 @@
 	  			<td>${book.description }</td>
 	  			<td>
 	  				<a href="#">修改</a>
-	  				<a href="#">删除</a>
+					<a href="${pageContext.request.contextPath }/manager/DeleteServlet?toDelete=book&bid=${book.id}">删除</a>
 	  			</td>
   			</tr>
 		</c:forEach>

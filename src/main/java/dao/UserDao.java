@@ -28,4 +28,13 @@ public interface UserDao {
      * @throws SQLException
      */
     User selectByID(Integer id) throws SQLException;
+
+    /**
+     * 根据id删除
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+
+    Integer deleteUserById(Integer id) throws SQLException;
 }

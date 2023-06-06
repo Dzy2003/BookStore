@@ -64,4 +64,13 @@ public interface OrderDao {
      * @param order
      */
     void updateStatus(Order order) throws SQLException;
+
+    /**
+     * 根据id删除
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+
+    Integer deleteOrderById(Integer id) throws SQLException;
 }

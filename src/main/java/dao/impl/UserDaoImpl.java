@@ -31,4 +31,11 @@ public class UserDaoImpl implements UserDao {
         User user = runner.query(sql, new BeanHandler<User>(User.class), id);
         return user;
     }
+
+    @Override
+    public Integer deleteUserById(Integer id) throws SQLException {
+        QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
+        String sql = "delete from user where id = ?";
+        return runner.update(sql,id);
+    }
 }

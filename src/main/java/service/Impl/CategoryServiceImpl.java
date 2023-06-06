@@ -20,4 +20,10 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> getAllCategories() throws SQLException {
         return dao.getAll();
     }
+
+    @Override
+    public void delete(Integer id) throws SQLException {
+        dao.deleteCategoryById(id);
+    }
+
 }

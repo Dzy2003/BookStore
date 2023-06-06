@@ -42,5 +42,10 @@ public interface OrderService {
      */
      List<Order> clientListOrder(Integer uid) throws SQLException;
 
+    /**
+     * 删除
+     * @param id
+     */
+    void delete(Integer id) throws SQLException;
 }
 

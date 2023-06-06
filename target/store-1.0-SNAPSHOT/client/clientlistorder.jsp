@@ -26,7 +26,7 @@
 	    		<td>${order.state==true?'已发货':'未发货' }</td>
 	    		<td>
 	    			<a href="${pageContext.request.contextPath }/client/ClientOrderDetailServlet?orderid=${order.id}">查看明细</a>
-	    			<a href="#">删除</a>
+	    			<a href="${pageContext.request.contextPath }/client/DeleteServlet?toDelete=order&oid=${order.id}">删除</a>
 	    		</td>
     		</tr>
     	</c:forEach>  	

@@ -45,4 +45,13 @@ public interface CartDao {
      * @return
      */
     List<Cart> selectCartVoByCids(Integer[] cids) throws SQLException;
+
+    /**
+     * 根据id删除
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+
+    Integer deleteCartById(Integer id) throws SQLException;
 }

@@ -39,4 +39,11 @@ public class CategoryDaoImpl implements CategoryDao {
         String sql = "select * from category where name= ?";
         return (Category)runner.query(sql,  new BeanHandler(Category.class),name);
     }
+
+    @Override
+    public Integer deleteCategoryById(Integer id) throws SQLException {
+        QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
+        String sql = "delete from category where id = ?";
+        return runner.update(sql,id);
+    }
 }

@@ -29,4 +29,11 @@ public class UserServiceImpl implements UserService {
     public User findByID(Integer id) throws SQLException {
         return  userDao.selectByID(id);
     }
+
+    @Override
+    public void delete(Integer id) throws SQLException {
+        userDao.deleteUserById(id);
+    }
+
+
 }

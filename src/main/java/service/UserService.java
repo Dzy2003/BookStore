@@ -28,4 +28,10 @@ public interface UserService {
      * @throws SQLException
      */
     User findByID(Integer id) throws SQLException;
+
+    /**
+     * 删除
+     * @param id
+     */
+    void delete(Integer id) throws SQLException;
 }

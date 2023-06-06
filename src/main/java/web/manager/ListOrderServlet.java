@@ -21,7 +21,6 @@ import java.util.List;
 @WebServlet("/manager/ListOrderServlet")
 public class ListOrderServlet extends HttpServlet {
 	OrderService service = new OrderServiceImpl();
-	UserService userService = new UserServiceImpl();
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Boolean state = Boolean.valueOf(request.getParameter("state"));
