@@ -85,7 +85,7 @@
 ```
 
 3. 在`MySQL`中运行`resource`目录下的`bookstore.sql`，生成该项目所需要的数据库和表。
-4. 将项目部署到本地的tomcat上，运行后打开浏览器并访问 `http://localhost:3000`。
+4. 将项目部署到本地的tomcat上，运行后打开浏览器并访问 `http://localhost:8080`。
 
 ## 技术栈
 
