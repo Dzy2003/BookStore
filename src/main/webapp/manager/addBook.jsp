@@ -42,7 +42,7 @@
     	<tr>
     		<td>所属分类</td>
     		<td>
-    			<select name="category_id">
+    			<select name="cid">
     				<c:forEach var="c" items="${categories}">
     					<option value="${c.id }">${c.name }</option>
     				</c:forEach>

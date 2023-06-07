@@ -24,7 +24,7 @@
 	  			<td>${book.author}</td>
 	  			<td>${book.price}</td>
 	  			<td>
-					<img src="${pageContext.request.contextPath }/images/${book.image}" alt="50px">
+					<img src="${pageContext.request.contextPath }/images/${book.image}" height=150 width=100>
 				</td>
 	  			<td>${book.description }</td>
 	  			<td>

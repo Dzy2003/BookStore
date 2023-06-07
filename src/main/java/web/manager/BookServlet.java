@@ -114,6 +114,11 @@ public class BookServlet extends HttpServlet {
         }
     }
 
+    /**
+     * 对保存的文件名进行编码
+     * @param filename
+     * @return
+     */
     public String makeFileName(String filename){
         String ext = filename.substring(filename.lastIndexOf(".") + 1);//lastIndexOf("\\.")����д����
         return UUID.randomUUID().toString() + "." + ext;
